@@ -9,22 +9,24 @@ import CarriesPathWays from './pages/CarriesPathWays'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  
+
 
   return (
     <>
-    <BrowserRouter>
-     
-    <Navbar/>
- 
-    <Routes>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path='/about' element={<About/>}></Route>
-      <Route path='/sectors' element={<Sectors/>}></Route>
-      <Route path='/successStories' element={<SuccessStories/>}></Route>
-      <Route path='/carriesPathWays' element={<CarriesPathWays/>}></Route>
-    </Routes>
-    </BrowserRouter>
+      <div className='mx-auto'>
+
+        <BrowserRouter>
+          <Navbar />
+
+          <Routes>
+            <Route path='/' element={<Home />}></Route>
+            <Route path='/about' element={<About />}></Route>
+            <Route path='/sectors' element={<Sectors />}></Route>
+            <Route path='/successStories' element={<SuccessStories />}></Route>
+            <Route path='/carriesPathWays' element={<CarriesPathWays />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   )
 }
