@@ -6,6 +6,7 @@ import About from './pages/About'
 import Sectors from './pages/Sectors'
 import SuccessStories from './pages/SuccessStories'
 import CarriesPathWays from './pages/CarriesPathWays'
+import Footer from './pages/Footer'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
       <Route path='/successStories' element={<SuccessStories/>}></Route>
       <Route path='/carriesPathWays' element={<CarriesPathWays/>}></Route>
     </Routes>
+
+    <Footer/>
     </BrowserRouter>
     </>
   )
