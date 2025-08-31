@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import dark from "./assets/dark-icon.png";
+import log from "./assets/log1.png";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
       }}
     >
       <div>
-        <h1 className="font-bold text-xl">Log</h1>
+        <img src={log} alt=""  className=" w-30"/>
       </div>
       <div className="flex justify-between gap-5 items-center">
         {/* Language Selector */}
