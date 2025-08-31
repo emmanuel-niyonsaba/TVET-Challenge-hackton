@@ -26,7 +26,7 @@ function App() {
       <Route path='/carriesPathWays' element={<CarriesPathWays/>}></Route>
     </Routes>
 
-    <Footer/>
+    <Footer/> 
     </BrowserRouter>
     </>
   )
