@@ -13,11 +13,8 @@ function App() {
 
   return (
     <>
-      <div className='mx-auto'>
-
         <BrowserRouter>
           <Navbar />
-
           <Routes>
             <Route path='/' element={<Home />}></Route>
             <Route path='/about' element={<About />}></Route>
@@ -26,7 +23,6 @@ function App() {
             <Route path='/carriesPathWays' element={<CarriesPathWays />}></Route>
           </Routes>
         </BrowserRouter>
-      </div>
     </>
   )
 }
