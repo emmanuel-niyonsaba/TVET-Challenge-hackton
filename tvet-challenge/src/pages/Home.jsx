@@ -6,6 +6,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import firstAd from '../assets/landingPage/firstAd.png';
 import secondAd from '../assets/landingPage/secondAd.png'
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 const Home = () => {
     const slides = [
         <div className='w-full relative'>
@@ -61,7 +62,7 @@ const Home = () => {
     }, [])
     return (
         <>
-            <div className='mx-auto'>
+            <div className='mx-auto flex flex-col space-y-5'>
                 <div className='w-full relative h-[85vh]'>
                     {slides.map((divs, index) => (
                         <div
@@ -85,7 +86,7 @@ const Home = () => {
                             </h1>
 
                             <p className="poppins text-xl mb-3">
-                                💼 [XXX Company] is thrilled to welcome passionate Web Developers to join our growing team!
+                                💼 XXX Company is thrilled to welcome passionate Web Developers to join our growing team!
                             </p>
 
                             <h2 className="font-semibold mb-3">
@@ -152,7 +153,27 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                
+
+                <div className='flex flex-col space-y-5 px-4'>
+                    <div className='flex flex-row justify-between'>
+                        <p className='text-2xl poppins-extralight w-full'>Testimonies</p>
+                        <ChevronRightIcon className='text-3xl text-black' />
+                    </div>
+                    <div className='flex flex-row space-x-5 w-full  overflow-x-auto scrollbar-hide'>
+                        <div className='w-fit bg-[#fef7ff] p-3 flex flex-col border-2 '>
+                                <div className='flex flex-row justify-around space-x-4'>
+                                    <div className=' h-10 bg-[#eaddff] rounded-full p-4 flex items-center'>
+                                        <p className='text-2xl text-blue-900 poppins'>E</p>
+                                    </div>
+                                    <div className='flex flex-col'>
+                                        <p className='text-black font-semibold text-sm poppins-extralight'>Emmanuel Niyonsaba</p>
+                                        <p className='text-black poppins'>Junior Developer at TheGym</p>
+                                    </div>
+                                    <MoreVertIcon className='text-2xl' />
+                                </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </>
