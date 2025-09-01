@@ -51,9 +51,18 @@ const Footer = () => {
             <div className=" flex justify-between p-5 items-center">
                 <div className=" space-y-3">
                    <div className=" space-x-3">
+                   <Link to="https://www.instagram.com/rtb_rwanda/">
                     <InstagramIcon/>
+                   </Link>
+                   <Link to="https://x.com/RTB_Rwanda">
                     <XIcon/>
+                   </Link>
+
+
+                 <Link to="https://www.youtube.com/@rwandatvetboard">
+                 
                     <YouTubeIcon/>
+                    </Link>
                     <LinkedInIcon/>
                     </div>
                     <p>@rtb-rwanda</p>

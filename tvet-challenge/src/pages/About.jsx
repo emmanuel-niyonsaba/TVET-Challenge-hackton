@@ -5,7 +5,12 @@ import cap from '../assets/about-photos/cap.png'
 import { Link } from "react-router-dom"
 import looking from '../assets/about-photos/Looking1.png'
 import target from '../assets/about-photos/target11.png'
-
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import CastForEducationIcon from '@mui/icons-material/CastForEducation';
+import { ModelTraining } from '@mui/icons-material'
+import ComputerIcon from '@mui/icons-material/Computer';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import AgricultureIcon from '@mui/icons-material/Agriculture';
 const About = () => {
     return (
         <div className="min-h-screen bg-gray-50">
@@ -53,9 +58,10 @@ const About = () => {
                     {/* Card 1 - Job Ready Training */}
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div className="p-6">
-                            <div className="w-12 h-12 bg-blue-100 rounded-lg mb-4 flex items-center justify-center">
-                                <div className="w-6 h-6 bg-blue-500 rounded"></div>
-                            </div>
+
+                      
+                                   <RocketLaunchIcon/>
+                          
 
                             <img
                                 src={job}
@@ -74,10 +80,8 @@ const About = () => {
                     {/* Card 2 - Practical Skills */}
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <div className="p-6">
-                            <div className="w-12 h-12 bg-green-100 rounded-lg mb-4 flex items-center justify-center">
-                                <div className="w-6 h-6 bg-green-500 rounded"></div>
-                            </div>
-
+                           
+                        <CastForEducationIcon/>
                             <img
                                 src={improve}
                                 alt="Skill Development"
@@ -95,9 +99,8 @@ const About = () => {
                     {/* Card 3 - Quality Training */}
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 md:col-span-2 lg:col-span-1">
                         <div className="p-6">
-                            <div className="w-12 h-12 bg-purple-100 rounded-lg mb-4 flex items-center justify-center">
-                                <div className="w-6 h-6 bg-purple-500 rounded"></div>
-                            </div>
+
+                            <ModelTraining/>
 
                             <img
                                 src={cap}
@@ -116,7 +119,7 @@ const About = () => {
 
                     <h1 className=' text-3xl font-bold p-6 '> Why this platform Exist</h1>
                 <div className=' grid grid-cols-2 gap-4 '>
-                    <div>
+                    <div className=' border-2 border-blue-500 p-4 rounded-[20px]'>
                         <div className=' flex justify-between items-center space-y-3'>
                             <h1 className=' text-2xl font-bold text-blue-600'>Private Sectors </h1>
                             <img src={looking} alt="" className=' w-8' />
@@ -124,8 +127,8 @@ const About = () => {
                         <div>
                             <p>Private sector and industry stakeholders are not sufficiently engaged or investing in skills development</p>
                         </div>
-                    </div>
-                    <div>
+                    </div >
+                    <div className=' border-2 border-blue-500 p-4 rounded-[20px]'>
                         <div className=' flex justify-between items-center'>
                             <h1 className=' text-2xl font-bold text-blue-600'>This platform is here </h1>
                             <img src={target} alt="" className=' w-8' />
@@ -134,7 +137,7 @@ const About = () => {
                             <p>Private sector and industry stakeholders are not sufficiently engaged or investing in skills development</p>
                         </div>
                     </div>
-                    <div>
+                    <div className=' border-2 border-blue-500 p-4 rounded-[20px]'>
                         <div className=' flex justify-between items-center'>
                             <h1 className=' text-2xl font-bold text-blue-600'>Graduates</h1>
                             <img src={looking} alt="" className=' w-8' />
@@ -144,7 +147,7 @@ const About = () => {
                                 Private sector and industry stakeholders are not sufficiently engaged or investing in skills development.</p>
                         </div>
                     </div>
-                    <div>
+                    <div className=' border-2 border-blue-500 p-4 rounded-[20px]'>
                         <div className=' flex justify-between items-center'>
                             <h1 className=' text-2xl font-bold text-blue-600'>Apart for the  a lot of TVET Benefits</h1>
                             <img src={target} alt="" className=' w-8' />
@@ -166,25 +169,19 @@ const About = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div className="text-center">
-                                <div className="w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                    <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
-                                </div>
+                              
                                 <h4 className="font-semibold text-lg mb-3 text-gray-900">Industry-Aligned</h4>
                                 <p className="text-gray-600 leading-relaxed">Programs designed to match current market demands and employer expectations</p>
                             </div>
 
                             <div className="text-center">
-                                <div className="w-16 h-16 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                    <div className="w-8 h-8 bg-green-500 rounded-full"></div>
-                                </div>
+                               
                                 <h4 className="font-semibold text-lg mb-3 text-gray-900">Practical Focus</h4>
                                 <p className="text-gray-600 leading-relaxed">Hands-on learning with real-world applications and industry-standard equipment</p>
                             </div>
 
                             <div className="text-center">
-                                <div className="w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                    <div className="w-8 h-8 bg-purple-500 rounded-full"></div>
-                                </div>
+                               
                                 <h4 className="font-semibold text-lg mb-3 text-gray-900">Quality Standards</h4>
                                 <p className="text-gray-600 leading-relaxed">Maintained excellence across all TVET programs with rigorous quality control</p>
                             </div>
@@ -214,23 +211,23 @@ const About = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
                             <div className="w-12 h-12 bg-blue-100 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                                <div className="w-6 h-6 bg-blue-500 rounded"></div>
-                            </div>
+                                        <ComputerIcon/>
+                                </div>
                             <h4 className="font-semibold text-lg text-gray-900 mb-2">ICT</h4>
                             <p className="text-gray-600 text-sm">Information and Communication Technology programs</p>
                         </div>
 
                         <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
-                            <div className="w-12 h-12 bg-orange-100 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                                <div className="w-6 h-6 bg-orange-500 rounded"></div>
+                            <div className="w-12 h-12 bg-blue-100 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                                <ConstructionIcon/>
                             </div>
                             <h4 className="font-semibold text-lg text-gray-900 mb-2">Construction</h4>
                             <p className="text-gray-600 text-sm">Building and construction trades training</p>
                         </div>
 
                         <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
-                            <div className="w-12 h-12 bg-green-100 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                                <div className="w-6 h-6 bg-green-500 rounded"></div>
+                            <div className="w-12 h-12 bg-blue-100 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                              <AgricultureIcon/>
                             </div>
                             <h4 className="font-semibold text-lg text-gray-900 mb-2">Agriculture</h4>
                             <p className="text-gray-600 text-sm">Agricultural and farming technology programs</p>
