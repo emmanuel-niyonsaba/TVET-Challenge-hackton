@@ -13,7 +13,9 @@ import hospitality from '../assets/sector-photos/hospitality.png'
 import Technicalservice from '../assets/sector-photos/Technicalservice.png'
 import energy from '../assets/sector-photos/energy.png'
 import engeneering from '../assets/sector-photos/engeneering.png'
-import transport from    '../assets/sector-photos/Transport.png'
+import transport from '../assets/sector-photos/Transport.png'
+import { Link } from "react-router-dom";
+
 
 
 
@@ -58,9 +60,11 @@ const Sectors = () => {
                     <p className="text-base text-gray-600 leading-relaxed">
                       Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
                     </p>
-                    <a href="/sectors" className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                    <Link to="/beauty"
+                      className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
-                    </a>
+
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -78,9 +82,11 @@ const Sectors = () => {
                     <p className="text-base text-gray-600 leading-relaxed">
                       Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
                     </p>
-                    <a href="/sectors" className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                   <Link to="/ict"
+                   className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
-                    </a>
+                    
+                   </Link>
                   </div>
                 </div>
               </div>
@@ -98,15 +104,17 @@ const Sectors = () => {
                     <p className="text-base text-gray-600 leading-relaxed">
                       Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
                     </p>
-                    <a href="/sectors" className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                 <Link to="/constraction"
+                     className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
-                    </a>
+                   
+                 </Link>
                   </div>
                 </div>
               </div>
             </div>
 
-    
+
             <div className="relative group w-full max-w-lg mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-center">
                 Energy
@@ -119,9 +127,11 @@ const Sectors = () => {
                     <p className="text-base text-gray-600 leading-relaxed">
                       Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
                     </p>
-                    <a href="/sectors" className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                  <Link to="/energy"
+                    className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
-                    </a>
+                   
+                  </Link>
                   </div>
                 </div>
               </div>
@@ -139,9 +149,11 @@ const Sectors = () => {
                     <p className="text-base text-gray-600 leading-relaxed">
                       Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
                     </p>
-                    <a href="/sectors" className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                  <Link to="/technical"
+                  className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
-                    </a>
+                    
+                  </Link>
                   </div>
                 </div>
               </div>
@@ -160,15 +172,17 @@ const Sectors = () => {
                     <p className="text-base text-gray-600 leading-relaxed">
                       Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
                     </p>
-                    <a href="/sectors" className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                  <Link to="hospitality"
+                  className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
-                    </a>
+                  
+                  </Link>
                   </div>
                 </div>
               </div>
             </div>
 
-            
+
             <div className="relative group w-full max-w-lg mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-center">
                 Art and Craft
@@ -181,15 +195,17 @@ const Sectors = () => {
                     <p className="text-base text-gray-600 leading-relaxed">
                       Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
                     </p>
-                    <a href="/sectors" className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                  <Link to="/art"
+                   className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
-                    </a>
+                    
+                  </Link>
                   </div>
                 </div>
               </div>
             </div>
 
-            
+
             <div className="relative group w-full max-w-lg mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-center">
                 Agriculture and Food Processing
@@ -202,15 +218,17 @@ const Sectors = () => {
                     <p className="text-base text-gray-600 leading-relaxed">
                       Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
                     </p>
-                    <a href="/sectors" className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                   <Link to="/agriculture"
+                     className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
-                    </a>
+                    
+                   </Link>
                   </div>
                 </div>
               </div>
             </div>
 
-        
+
             <div className="relative group w-full max-w-lg mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-center">
                 Transport and Logistics
@@ -223,15 +241,17 @@ const Sectors = () => {
                     <p className="text-base text-gray-600 leading-relaxed">
                       Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
                     </p>
-                    <a href="/sectors" className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                   <Link to="/transport"
+                    className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
-                    </a>
+                   
+                   </Link>
                   </div>
                 </div>
               </div>
             </div>
 
-            
+
             <div className="relative group w-full max-w-lg mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-center">
                 Manufacturing and Mining
@@ -244,17 +264,19 @@ const Sectors = () => {
                     <p className="text-base text-gray-600 leading-relaxed">
                       Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
                     </p>
-                    <a href="/sectors" className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+                    <Link to="/manufacturing"
+                     className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
-                    </a>
+                
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
 
-           
-              
-        
+
+
+
           </div>
         </div>
       </div>
