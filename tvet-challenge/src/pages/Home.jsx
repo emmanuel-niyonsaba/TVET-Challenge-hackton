@@ -160,17 +160,18 @@ const Home = () => {
                         <ChevronRightIcon className='text-3xl text-black' />
                     </div>
                     <div className='flex flex-row space-x-5 w-full  overflow-x-auto scrollbar-hide'>
-                        <div className='w-fit bg-[#fef7ff] p-3 flex flex-col border-2 '>
-                                <div className='flex flex-row justify-around space-x-4'>
+                        <div className='w-fit bg-[#fef7ff] p-3 flex flex-col border-2 shadow-lg'>
+                                <div className='flex flex-row justify-around space-x-5'>
                                     <div className=' h-10 bg-[#eaddff] rounded-full p-4 flex items-center'>
                                         <p className='text-2xl text-blue-900 poppins'>E</p>
                                     </div>
-                                    <div className='flex flex-col'>
+                                    <div className='flex flex-col space-y-2'>
                                         <p className='text-black font-semibold text-sm poppins-extralight'>Emmanuel Niyonsaba</p>
-                                        <p className='text-black poppins'>Junior Developer at TheGym</p>
+                                        <p className='text-black poppins hover:cursor-pointer'>Junior Developer at TheGym</p>
                                     </div>
-                                    <MoreVertIcon className='text-2xl' />
+                                    <MoreVertIcon className='text-2xl hover:cursor-pointer' />
                                 </div>
+                                
                         </div>
                     </div>
                 </div>
