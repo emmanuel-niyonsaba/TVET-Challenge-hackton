@@ -31,7 +31,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div className='w-40 h-15 border-[2px] border-white flex flex-row items-center'>
-                    <p className='text-white flex items-center p-4'>Learn more</p>
+                    <p className='text-white flex items-center p-4 poppins-extralight'>Learn more</p>
                     <ArrowRightAltIcon className='text-white' />
                 </div>
             </div>
@@ -77,10 +77,37 @@ const Home = () => {
                         <ChevronRightIcon className='text-3xl text-black' />
                     </div>
                     <div className='w-full flex flex-row space-x-3'>
-                        <div className='w-1/2'>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Nemo error blanditiis doloremque repellat ipsa! Enim, necessitatibus. 
-                            Beatae reprehenderit quod debitis! Illo nisi nemo similique expedita modi magnam in aspernatur perferendis!
+                        <div className='w-1/2 text-2xl'>
+                            <h1 className='font-bold  poppins-extralight'>
+                                ✨ 🚀 Ready to Kick-Start Your ICT Career? ✨
+                            </h1>
+
+                            <p className='poppins text-xl'>
+                                💼 [XXX Company] is excited to announce that we’re happily open to hiring passionate Web Developers!
+                            </p>
+
+                            <h2 className='font-semibold mt-5'>
+                                👩‍💻 What we’re looking for:  
+                            </h2>
+                            <ul className='flex flex-col items-center'>
+                                <li>
+                                    🌐 Web Development skills
+                                </li>
+                                <li>
+                                    🎨 UI/UX Design expertise
+
+                                </li>
+                                <li>
+
+                                    🗣️ Strong Communication skills
+                                </li>
+                            </ul><br />
+
+
+
+                            Even if you only took short ICT courses — you’re still welcome to apply!
+                            <p className='font-semibold'>"We believe talent and determination matter more than the length of your study."</p>
+                            👉 If you’re motivated, creative, and eager to grow, this opportunity is for YOU!
                         </div>
                         <div className='w-1/2'>
                             <img src={firstImg} alt="" className='object-cover' />
