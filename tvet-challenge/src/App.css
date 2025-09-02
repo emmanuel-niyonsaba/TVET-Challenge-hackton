@@ -1,0 +1,33 @@
+body{
+  top: 0 !important;
+}
+
+iframe{
+  display: none;
+}
+
+.goog-te-combo{
+  /* bg-white py-2 px-2 rounded */
+}
+#google_translate_element span{
+  display: none;
+}
+
+#google_translate_element span{
+  display: none;
+}
+#goog-gt:hover, font:hover{
+  box-shadow: none !important;
+  background-color: transparent !important;
+  
+}
+#goog-gt-tt,.goog-te-balloon-frame {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
