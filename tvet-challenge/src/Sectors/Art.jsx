@@ -150,25 +150,25 @@ const Art = ({ agriculturalStats, slideshowImages }) => {
 
   const defaultData = {
     production: [
-      { name: 'Crops', value: 4500 },
-      { name: 'Livestock', value: 3200 },
-      { name: 'Dairy', value: 2800 },
-      { name: 'Fruits', value: 3800 },
-      { name: 'Vegetables', value: 4200 }
+      { name: 'Artboard', value: 4500 },
+      { name: 'Uduseke', value: 3200 },
+      { name: 'illustrations', value: 2800 },
+      { name: 'pictures', value: 3800 },
+      { name: 'books', value: 4200 }
     ],
-    yield: [
-      { name: 'Crops', value: 3200 },
-      { name: 'Livestock', value: 2800 },
-      { name: 'Dairy', value: 3500 },
-      { name: 'Fruits', value: 2900 },
-      { name: 'Vegetables', value: 3800 }
+    yield: [     
+      { name: 'Artboard', value: 4500 },
+      { name: 'Uduseke', value: 3200 },
+      { name: 'illustrations', value: 2800 },
+      { name: 'pictures', value: 3800 },
+      { name: 'books', value: 4200 }
     ],
     area: [
-      { name: 'Crops', value: 2800 },
-      { name: 'Livestock', value: 2200 },
-      { name: 'Dairy', value: 1800 },
-      { name: 'Fruits', value: 2400 },
-      { name: 'Vegetables', value: 3000 }
+      { name: 'Artboard', value: 4500 },
+      { name: 'Uduseke', value: 3200 },
+      { name: 'illustrations', value: 2800 },
+      { name: 'pictures', value: 3800 },
+      { name: 'books', value: 4200 }
     ]
   }
 
@@ -176,28 +176,28 @@ const Art = ({ agriculturalStats, slideshowImages }) => {
   const defaultImages = [
     {
       src: trees,
-      alt: "Agricultural landscape in Ngororero district",
-      caption: "July 12, 2025 - Agricultural landscape in Ngororero district showing diverse farming practices"
+      alt: "Art  in Nyagatare district",
+      caption: "July 12, 2025 - includes the traditional crafts of basket weaving, ceramics, and wood carving, as well as Imigongo, a unique cow dung artform"
     },
     {
       src: drow,
-      alt: "Coffee plantation in Rwanda",
-      caption: "Coffee plantation - One of Rwanda's major export crops contributing significantly to foreign exchange"
+      alt: "Drawing board in Rwanda",
+      caption: "Craft and art - One of Rwanda's major export Craft and Art contributing significantly to foreign exchange"
     },
     {
       src: bottles,
-      alt: "Tea cultivation terraces",
-      caption: "Tea cultivation on terraced hillsides demonstrating sustainable farming practices"
+      alt: "Bottles Designed by Rwandans",
+      caption: "Bottles and something like that we improved it in  practices using nature trees we found here in rwanda"
     },
     {
       src: bord,
-      alt: "Livestock farming",
-      caption: "Livestock farming supporting rural livelihoods and contributing to agricultural GDP"
+      alt: "This is the drawing board",
+      caption: "Art is one other TVET activity that provide a lot of incomes to Rwandans"
     },
     {
       src: blackman,
-      alt: "Grain harvest season",
-      caption: "Grain harvest season showcasing cereal production for local consumption and export"
+      alt: "Illustration on board with black man",
+      caption: "This make by young boy from Nyagatere and he use to  export to External countries"
     }
   ]
 
