@@ -94,7 +94,6 @@ const Navbar = () => {
         >
           Get Started
         </Link>
-
         {/* Dark Mode Toggle */}
         <button
           onClick={() => setDarkMode(!darkMode)}

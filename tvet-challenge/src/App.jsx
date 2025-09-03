@@ -6,6 +6,7 @@ import About from './pages/About'
 import Sectors from './pages/Sectors'
 import SuccessStories from './pages/SuccessStories'
 import CarriesPathWays from './pages/CarriesPathWays'
+import GetStarted from './pages/GetStarted.jsx'
 import Footer from './pages/Footer'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -36,6 +37,7 @@ function App() {
       <Route path='/sectors' element={<Sectors/>}></Route>
       <Route path='/successStories' element={<SuccessStories/>}></Route>
       <Route path='/carriesPathWays' element={<CarriesPathWays/>}></Route>
+     
 
       
       <Route path='/beauty' element={<Beauty/>}></Route>
@@ -56,6 +58,7 @@ function App() {
 
     <Footer/> 
     </BrowserRouter>
+    {/* <GetStarted /> */}
     </>
   )
 }
