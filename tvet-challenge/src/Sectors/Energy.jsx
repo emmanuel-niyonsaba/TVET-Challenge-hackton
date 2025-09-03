@@ -152,56 +152,56 @@ const Energy = ({ agriculturalStats, slideshowImages }) => {
 
   const defaultData = {
     production: [
-      { name: 'Crops', value: 4500 },
-      { name: 'Livestock', value: 3200 },
-      { name: 'Dairy', value: 2800 },
-      { name: 'Fruits', value: 3800 },
-      { name: 'Vegetables', value: 4200 }
+    { name: 'Hydropower', value: 145.5 },
+    { name: 'Thermal', value: 170.5 },
+    { name: 'Solar', value: 14.0 },
+    { name: 'Biogas', value: 8.0 },
+    { name: 'Geothermal', value: 0.0 }
     ],
     yield: [
-      { name: 'Crops', value: 3200 },
-      { name: 'Livestock', value: 2800 },
-      { name: 'Dairy', value: 3500 },
-      { name: 'Fruits', value: 2900 },
-      { name: 'Vegetables', value: 3800 }
+    { name: 'Hydropower', value: 145.5 },
+    { name: 'Thermal', value: 170.5 },
+    { name: 'Solar', value: 14.0 },
+    { name: 'Biogas', value: 8.0 },
+    { name: 'Geothermal', value: 0.0 }
     ],
     area: [
-      { name: 'Crops', value: 2800 },
-      { name: 'Livestock', value: 2200 },
-      { name: 'Dairy', value: 1800 },
-      { name: 'Fruits', value: 2400 },
-      { name: 'Vegetables', value: 3000 }
+    { name: 'Hydropower', value: 145.5 },
+    { name: 'Thermal', value: 170.5 },
+    { name: 'Solar', value: 14.0 },
+    { name: 'Biogas', value: 8.0 },
+    { name: 'Geothermal', value: 0.0 }
     ]
   }
 
 
   const defaultImages = [
-    {
-      src: waterEnergy,
-      alt: "Agricultural landscape in Ngororero district",
-      caption: "July 12, 2025 - Agricultural landscape in Ngororero district showing diverse farming practices"
-    },
-    {
-      src: solarpannel,
-      alt: "Coffee plantation in Rwanda",
-      caption: "Coffee plantation - One of Rwanda's major export crops contributing significantly to foreign exchange"
-    },
-    {
-      src: solarinsoil,
-      alt: "Tea cultivation terraces",
-      caption: "Tea cultivation on terraced hillsides demonstrating sustainable farming practices"
-    },
-    {
-      src: qualidade,
-      alt: "Livestock farming",
-      caption: "Livestock farming supporting rural livelihoods and contributing to agricultural GDP"
-    },
-    {
-      src: geothermal,
-      alt: "Grain harvest season",
-      caption: "Grain harvest season showcasing cereal production for local consumption and export"
-    }
-  ]
+  {
+    src: waterEnergy,
+    alt: "Hydropower plant in Rwanda",
+    caption: "July 12, 2025 - Hydropower plant demonstrating electricity generation from water resources in Rwanda"
+  },
+  {
+    src: solarpannel,
+    alt: "Solar panel installation",
+    caption: "Solar panel installation providing renewable energy solutions in Rwandan communities"
+  },
+  {
+    src: solarinsoil,
+    alt: "Solar farm in Rwanda",
+    caption: "Solar farm utilizing large-scale photovoltaic panels to generate clean energy"
+  },
+  {
+    src: qualidade,
+    alt: "Biogas facility",
+    caption: "Biogas facility converting organic waste into energy and supporting sustainable energy practices"
+  },
+  {
+    src: geothermal,
+    alt: "Geothermal energy site",
+    caption: "Geothermal site showcasing renewable energy extraction from underground heat sources in Rwanda"
+  }
+]
 
   const data = agriculturalStats || defaultData
   const images = slideshowImages || defaultImages
