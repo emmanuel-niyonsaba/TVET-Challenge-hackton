@@ -12,6 +12,7 @@ import darius from '../assets/landingPage/darius.jpg'
 import janvier from '../assets/landingPage/janvier.jpg'
 import merci from '../assets/landingPage/merci.jpg'
 import muhoza from '../assets/landingPage/muhoza.jpg'
+import GetStarted from './GetStarted';
 const Home = () => {
     const slides = [
         <div className='w-full relative'>
@@ -291,6 +292,7 @@ const Home = () => {
                 </div>
 
             </div>
+            <GetStarted/>
         </>
     )
 }

@@ -3,22 +3,22 @@ import { Link } from "react-router-dom";
 import dark from "./assets/dark-icon.png";
 import log from "./assets/log1.png";
 import Language from "./hooks/Language";
-import { Menu, X } from "lucide-react"; // icons for hamburger
+import { Menu, X, ChevronDown, User } from "lucide-react";
+import { useLocation } from "react-router-dom";
+import useAuth from "./hooks/useAuth"; // import your useAuth hook
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [accountOpen, setAccountOpen] = useState(false);
   const googleTranslateRef = useRef(null);
+
+  const { isLoggedIn, user, logout } = useAuth();
 
   // Dark mode effect
   useEffect(() => {
-    if (darkMode) {
-      document.body.style.backgroundColor = "black";
-      document.body.style.color = "white";
-    } else {
-      document.body.style.backgroundColor = "white";
-      document.body.style.color = "black";
-    }
+    document.body.style.backgroundColor = darkMode ? "black" : "white";
+    document.body.style.color = darkMode ? "white" : "black";
   }, [darkMode]);
 
   // Language change handler
@@ -38,7 +38,6 @@ const Navbar = () => {
     const googleTranslateElementInit = () => {
       if (window.google && window.google.translate) {
         clearInterval(intervalId);
-
         new window.google.translate.TranslateElement(
           {
             pageLanguage: "en",
@@ -52,6 +51,11 @@ const Navbar = () => {
     };
     intervalId = setInterval(googleTranslateElementInit, 100);
   }, []);
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [location]);
 
   return (
     <nav
@@ -67,7 +71,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex items-center gap-6">
+      <div className="hidden md:flex items-center gap-6 relative">
         <div
           id="google_translate_element"
           style={{ display: "none" }}
@@ -80,12 +84,37 @@ const Navbar = () => {
         <Link to="/sectors">Sectors</Link>
         <Link to="/successStories">Success Stories</Link>
         <Link to="/carriesPathWays">Carries Pathways</Link>
-        <Link
-          to=""
+        { !isLoggedIn && <Link
+          to="/auth"
           className="bg-green-500 rounded-2xl text-white font-bold px-4 py-2 hover:bg-green-600 transition"
         >
           Get Started
-        </Link>
+        </Link>}
+
+              
+{isLoggedIn && (
+  <div className="relative">
+    <button
+      onClick={() => setAccountOpen(!accountOpen)}
+      className="flex items-center gap-2 bg-green-500 text-white font-bold px-3 py-2 rounded-2xl hover:bg-green-600 transition"
+    >
+      <User size={20} /> <ChevronDown size={16} />
+    </button>
+
+    {accountOpen && (
+      <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg text-black z-50 px-2 border border-gray-300">
+        <p className="px-4 py-2 border-b border-gray-300">{user?.email}</p>
+        <button
+          onClick={logout}
+          className="w-full text-left px-4 py-2 hover:bg-gray-100 cursor-pointer "
+        >
+          Logout
+        </button>
+      </div>
+    )}
+  </div>
+)}
+
         {/* Dark Mode Toggle */}
         <button
           onClick={() => setDarkMode(!darkMode)}
@@ -115,19 +144,35 @@ const Navbar = () => {
           }}
         >
           <Language onLanguageChange={handleLanguageChange} className="bg-transparent w-full" />
-
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link to="/sectors" onClick={() => setMenuOpen(false)}>Sectors</Link>
           <Link to="/successStories" onClick={() => setMenuOpen(false)}>Success Stories</Link>
           <Link to="/carriesPathWays" onClick={() => setMenuOpen(false)}>Carries Pathways</Link>
-          <Link
-            to=""
-            onClick={() => setMenuOpen(false)}
-            className="bg-green-500 rounded-2xl text-white font-bold px-4 py-2 hover:bg-green-600 transition"
-          >
-            Get Started
-          </Link>
+
+        
+{isLoggedIn && (
+  <div className="relative">
+    <button
+      onClick={() => setAccountOpen(!accountOpen)}
+      className="flex items-center gap-2 bg-green-500 text-white font-bold px-3 py-2 rounded-2xl hover:bg-green-600 transition"
+    >
+      <User size={20} /> <ChevronDown size={16} />
+    </button>
+
+    {accountOpen && (
+      <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg text-black z-50">
+        <p className="px-4 py-2 border-b">{user?.email}</p>
+        <button
+          onClick={logout}
+          className="w-full text-left px-4 py-2 hover:bg-gray-100"
+        >
+          Logout
+        </button>
+      </div>
+    )}
+  </div>
+)}
 
           {/* Dark Mode Toggle */}
           <button
