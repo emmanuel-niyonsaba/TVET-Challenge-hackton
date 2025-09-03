@@ -177,32 +177,33 @@ const Transport = ({ agriculturalStats, slideshowImages }) => {
 
 
   const defaultImages = [
-    {
-      src: tra1,
-      alt: "Agricultural landscape in Musanze  district",
-      caption: "July 22, 2025 - Toursm landscape in Ngororero district showing diverse farming practices"
-    },
-    {
-      src: tra2,
-      alt: "Coffee plantation in Rwanda",
-      caption: "Coffee plantation - One of Rwanda's major export crops contributing significantly to foreign exchange"
-    },
-    {
-      src: tra4,
-      alt: "Tea cultivation terraces",
-      caption: "Tea cultivation on terraced hillsides demonstrating sustainable farming practices"
-    },
-    {
-      src: tra5,
-      alt: "Livestock farming",
-      caption: "Livestock farming supporting rural livelihoods and contributing to agricultural GDP"
-    },
-    {
-      src: tra6,
-      alt: "Grain harvest season",
-      caption: "Grain harvest season showcasing cereal production for local consumption and export"
-    }
-  ]
+  {
+    src: tra1,
+    alt: "Kigali road network",
+    caption: "July 22, 2025 - Kigali road network showing traffic flow and urban transport infrastructure"
+  },
+  {
+    src: tra2,
+    alt: "Bus rapid transit system",
+    caption: "BRT system in Rwanda providing efficient public transportation services"
+  },
+  {
+    src: tra4,
+    alt: "Rwanda rail transport",
+    caption: "Rail transport infrastructure connecting major cities and facilitating cargo movement"
+  },
+  {
+    src: tra5,
+    alt: "Airport operations",
+    caption: "Airport operations in Rwanda handling passenger flights and cargo logistics"
+  },
+  {
+    src: tra6,
+    alt: "Logistics and freight services",
+    caption: "Logistics and freight services supporting domestic and regional transport of goods"
+  }
+]
+
 
   const data = agriculturalStats || defaultData
   const images = slideshowImages || defaultImages

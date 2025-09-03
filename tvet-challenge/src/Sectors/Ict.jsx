@@ -153,56 +153,56 @@ const Ict = ({ agriculturalStats, slideshowImages }) => {
 
   const defaultData = {
     production: [
-      { name: 'Crops', value: 4500 },
-      { name: 'Livestock', value: 3200 },
-      { name: 'Dairy', value: 2800 },
-      { name: 'Fruits', value: 3800 },
-      { name: 'Vegetables', value: 4200 }
+    { name: 'Mobile Subscribers', value: 7_000_000 },
+    { name: 'Internet Users', value: 5_500_000 },
+    { name: 'ICT Professionals', value: 10_000 },
+    { name: 'ICT Startups', value: 500 },
+    { name: 'Tech Hubs', value: 20 }
     ],
     yield: [
-      { name: 'Crops', value: 3200 },
-      { name: 'Livestock', value: 2800 },
-      { name: 'Dairy', value: 3500 },
-      { name: 'Fruits', value: 2900 },
-      { name: 'Vegetables', value: 3800 }
+    { name: 'Mobile Subscribers', value: 7_000_000 },
+    { name: 'Internet Users', value: 5_500_000 },
+    { name: 'ICT Professionals', value: 10_000 },
+    { name: 'ICT Startups', value: 500 },
+    { name: 'Tech Hubs', value: 20 }
     ],
     area: [
-      { name: 'Crops', value: 2800 },
-      { name: 'Livestock', value: 2200 },
-      { name: 'Dairy', value: 1800 },
-      { name: 'Fruits', value: 2400 },
-      { name: 'Vegetables', value: 3000 }
+     { name: 'Mobile Subscribers', value: 7_000_000 },
+    { name: 'Internet Users', value: 5_500_000 },
+    { name: 'ICT Professionals', value: 10_000 },
+    { name: 'ICT Startups', value: 500 },
+    { name: 'Tech Hubs', value: 20 }
     ]
   }
 
+const defaultImages = [
+  {
+    src: Group,
+    alt: "Tech hub in Kigali",
+    caption: "July 22, 2025 - ICT hub in Kigali showcasing startups, co-working spaces, and innovation labs"
+  },
+  {
+    src: P_TECH,
+    alt: "Rwandan software development",
+    caption: "Software development initiatives in Rwanda highlighting local tech talent and projects"
+  },
+  {
+    src: Preterite,
+    alt: "ICT training center",
+    caption: "ICT training center providing digital skills and professional courses to Rwandan youth"
+  },
+  {
+    src: aHijab,
+    alt: "E-government services",
+    caption: "E-government services in Rwanda enabling digital access to public services and data"
+  },
+  {
+    src: ai,
+    alt: "Artificial Intelligence lab",
+    caption: "AI research and development lab supporting innovation in Rwanda's tech ecosystem"
+  }
+]
 
-  const defaultImages = [
-    {
-      src: Group,
-      alt: "Agricultural landscape in Musanze  district",
-      caption: "July 22, 2025 - Toursm landscape in Ngororero district showing diverse farming practices"
-    },
-    {
-      src: P_TECH,
-      alt: "Coffee plantation in Rwanda",
-      caption: "Coffee plantation - One of Rwanda's major export crops contributing significantly to foreign exchange"
-    },
-    {
-      src: Preterite,
-      alt: "Tea cultivation terraces",
-      caption: "Tea cultivation on terraced hillsides demonstrating sustainable farming practices"
-    },
-    {
-      src: aHijab,
-      alt: "Livestock farming",
-      caption: "Livestock farming supporting rural livelihoods and contributing to agricultural GDP"
-    },
-    {
-      src: ai,
-      alt: "Grain harvest season",
-      caption: "Grain harvest season showcasing cereal production for local consumption and export"
-    }
-  ]
 
   const data = agriculturalStats || defaultData
   const images = slideshowImages || defaultImages
