@@ -58,8 +58,7 @@ const Sectors = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out bg-white/98 backdrop-blur-md">
                   <div className="space-y-4">
                     <p className="text-base text-gray-600 leading-relaxed">
-                      Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
-                    </p>
+The beauty and cosmetics industry in Rwanda is growing, with imports projected to reach $21 million by 2026, and a market revenue of $74.90 million in 2025.                    </p>
                     <Link to="/beauty"
                       className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
@@ -80,7 +79,7 @@ const Sectors = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out bg-white/98 backdrop-blur-md">
                   <div className="space-y-4">
                     <p className="text-base text-gray-600 leading-relaxed">
-                      Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                     Rwanda's ICT sector is growing rapidly, supported by government investment in digital infrastructure, skills, and a strategic vision to become a knowledge-based economy and regional innovation hub. 
                     </p>
                    <Link to="/ict"
                    className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
@@ -102,8 +101,7 @@ const Sectors = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out bg-white/98 backdrop-blur-md">
                   <div className="space-y-4">
                     <p className="text-base text-gray-600 leading-relaxed">
-                      Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
-                    </p>
+Rwanda's premier civil engineering and construction company, boasts the largest team of seasoned engineers and technicians.                    </p>
                  <Link to="/constraction"
                      className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
@@ -125,8 +123,7 @@ const Sectors = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out bg-white/98 backdrop-blur-md">
                   <div className="space-y-4">
                     <p className="text-base text-gray-600 leading-relaxed">
-                      Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
-                    </p>
+Opportunities exist in Micro and Small Hydropower projects and shared regional hydropower projects with East Africa (EAC) Partners.                    </p>
                   <Link to="/energy"
                     className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
@@ -139,7 +136,7 @@ const Sectors = () => {
 
             <div className="relative group w-full max-w-lg mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-center">
-                Technical Science
+                Technical Services
               </h3>
               <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-700 hover:scale-105">
                 <img className="w-full h-64 sm:h-72 object-cover transition-transform duration-1000 group-hover:scale-110" src={Technicalservice} alt="Computer Science" />
@@ -147,8 +144,7 @@ const Sectors = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out bg-white/98 backdrop-blur-md">
                   <div className="space-y-4">
                     <p className="text-base text-gray-600 leading-relaxed">
-                      Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
-                    </p>
+Businesses like ALTES provide services for electrical and mechanical construction, focusing on industrial and energy infrastructure for various clients.                     </p>
                   <Link to="/technical"
                   className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
@@ -170,8 +166,9 @@ const Sectors = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out bg-white/98 backdrop-blur-md">
                   <div className="space-y-4">
                     <p className="text-base text-gray-600 leading-relaxed">
-                      Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
-                    </p>
+The number of people employed in the tourism and hospitality sector has increased steadily over the past 5
+years, and was dominated by the food and beverage, transport and accommodation sectors which account for
+close to 90% of the jobs created, and this trend that has persisted over the years.                     </p>
                   <Link to="hospitality"
                   className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
@@ -193,8 +190,7 @@ const Sectors = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out bg-white/98 backdrop-blur-md">
                   <div className="space-y-4">
                     <p className="text-base text-gray-600 leading-relaxed">
-                      Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
-                    </p>
+The country boasts of a very rich cultural heritage and handicrafts are very unique and have an originality of their own.                    </p>
                   <Link to="/art"
                    className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
@@ -216,8 +212,7 @@ const Sectors = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out bg-white/98 backdrop-blur-md">
                   <div className="space-y-4">
                     <p className="text-base text-gray-600 leading-relaxed">
-                      Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
-                    </p>
+Agriculture and food processing are vital to Rwanda's economy, with the sector contributing significantly to GDP and employment and serving as a primary source of export earnings                    </p>
                    <Link to="/agriculture"
                      className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
@@ -239,8 +234,9 @@ const Sectors = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out bg-white/98 backdrop-blur-md">
                   <div className="space-y-4">
                     <p className="text-base text-gray-600 leading-relaxed">
-                      Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
-                    </p>
+Transportation is a critical sector for the Rwanda economy, accounting for approximately 4.4% of the
+economy’s GDP.1
+ T                    </p>
                    <Link to="/transport"
                     className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
@@ -262,8 +258,7 @@ const Sectors = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out bg-white/98 backdrop-blur-md">
                   <div className="space-y-4">
                     <p className="text-base text-gray-600 leading-relaxed">
-                      Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
-                    </p>
+Rwanda is now home to three state-of-the-art mineral value-addition facilities which include a gold refinery, a tantalum refinery, and a tin smelter.                    </p>
                     <Link to="/manufacturing"
                      className="inline-block bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
                       View Sector
