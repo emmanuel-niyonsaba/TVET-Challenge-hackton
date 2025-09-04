@@ -8,7 +8,7 @@ import SuccessStories from './pages/SuccessStories'
 import CarriesPathWays from './pages/CarriesPathWays'
 import GetStarted from './pages/GetStarted.jsx'
 import Footer from './pages/Footer'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
 import Beauty from './Sectors/Beauty'
 import Ict from './Sectors/Ict'
@@ -20,11 +20,15 @@ import Art from './Sectors/Art'
 import Agriculture from './Sectors/Agrculture'
 import Transport from './Sectors/Transport'
 import Manufacturing from './Sectors/Manufacturing'
-
+import Login from './pages/auth/Login.jsx'
+import Signup from './pages/auth/Signup.jsx'
+import AuthPage from './pages/auth/AuthPage.jsx'
+import ProtectedRoute from './hooks/ProtectedRoute.jsx'
 
 
 function App() {
 
+ 
   return (
     <>
     <BrowserRouter>
@@ -34,11 +38,14 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/about' element={<About/>}></Route>
-      <Route path='/sectors' element={<Sectors/>}></Route>
+      <Route path='/sectors' element={<ProtectedRoute><Sectors/></ProtectedRoute>}></Route>
       <Route path='/successStories' element={<SuccessStories/>}></Route>
       <Route path='/carriesPathWays' element={<CarriesPathWays/>}></Route>
      
-
+      <Route path='/auth' element={<AuthPage/>}>
+         <Route index element={<Login/>}/>
+         <Route path='signup' element={<Signup/>}/>
+      </Route>
       
       <Route path='/beauty' element={<Beauty/>}></Route>
       <Route path='/ict' element={<Ict/>}></Route>
