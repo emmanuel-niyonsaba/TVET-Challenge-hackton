@@ -50,9 +50,7 @@ const Login = () => {
         // Save token and user info in localStorage
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
-
-        // Redirect to home page
-        navigate("/");
+        window.location.href="/"
       } else {
         setMessage(data.message || "❌ Login failed, please try again.");
         setIsError(true);
