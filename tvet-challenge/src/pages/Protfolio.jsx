@@ -6,7 +6,7 @@ const Protfolio = () => {
   return (
    <>
    
-   <h1> This is The prot section</h1>
+   <h1> Then man protfolio will be here!!</h1>
    </>
   )
 }
