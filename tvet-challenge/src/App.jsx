@@ -6,7 +6,7 @@ import About from './pages/About'
 import Sectors from './pages/Sectors'
 import SuccessStories from './pages/SuccessStories'
 import CarriesPathWays from './pages/CarriesPathWays'
-import GetStarted from './pages/GetStarted.jsx'
+
 import Footer from './pages/Footer'
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
@@ -24,7 +24,11 @@ import Login from './pages/auth/Login.jsx'
 import Signup from './pages/auth/Signup.jsx'
 import AuthPage from './pages/auth/AuthPage.jsx'
 import ProtectedRoute from './hooks/ProtectedRoute.jsx'
-
+import GraduateCertificate from './pages/GraduateCertificate.jsx'
+import NotFound from './pages/NotFound.jsx'
+import PrivateSector from './pages/PrivateSectors.jsx'
+import PrivateSectors from './pages/PrivateSectors.jsx'
+import Protfolio from './pages/Protfolio.jsx'
 
 function App() {
 
@@ -36,6 +40,7 @@ function App() {
     <Navbar/>
  
     <Routes>
+      <Route path='*' element={<NotFound/>}/>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/about' element={<About/>}></Route>
       <Route path='/sectors' element={<ProtectedRoute><Sectors/></ProtectedRoute>}></Route>
@@ -57,6 +62,9 @@ function App() {
       <Route path='/agriculture' element={<Agriculture/>}></Route>
       <Route path='/transport' element={<Transport  />}></Route>
       <Route path='/manufacturing' element={<Manufacturing  />}></Route>
+      <Route path='/profile' element={<GraduateCertificate  />}></Route>
+      <Route path='/privateSectors' element={<PrivateSectors  />}></Route>
+      <Route path='/protfolio' element={<Protfolio  />}></Route>
 
       
 

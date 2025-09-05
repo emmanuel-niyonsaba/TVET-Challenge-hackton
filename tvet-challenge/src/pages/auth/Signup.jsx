@@ -1,9 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { BASE_API_URL } from "../../lib/API";
 
 const Signup = () => {
   const [role, setRole] = useState("graduate");
   const [isStudying, setIsStudying] = useState(null);
+  const [message, setMessage] = useState("");
+  const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // 🔹 NEW
+  const navigate = useNavigate();
 
   // Form data state
   const [formData, setFormData] = useState({
@@ -37,55 +42,68 @@ const Signup = () => {
   // Handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // 🔹 Start loading
 
     try {
       const apiUrl =
         role === "graduate"
-          ? "https://yourapi.com/graduate/signup"
-          : "https://yourapi.com/company/signup";
+          ? `${BASE_API_URL}/auth/graduate/signup`
+          : `${BASE_API_URL}/auth/company/signup`;
 
-      const payload = new FormData();
+      let payload = {};
 
-      // Add shared + role-specific fields
       if (role === "graduate") {
-        payload.append("username", formData.username);
-        payload.append("email", formData.email);
-        payload.append("location", formData.location);
-        payload.append("password", formData.password);
-        payload.append("confirmPassword", formData.confirmPassword);
+        payload.username = formData.username;
+        payload.email = formData.email;
+        payload.location = formData.location;
+        payload.password = formData.password;
+        payload.confirmPassword = formData.confirmPassword;
+        payload.isCurrentlyStudying = isStudying;
+
         if (isStudying === "yes") {
-          payload.append("currentEducation", formData.currentEducation);
+          payload.currentEducation = formData.currentEducation;
         } else if (isStudying === "no") {
-          payload.append("pastEducation", formData.pastEducation);
+          payload.pastEducation = formData.pastEducation;
         }
       } else {
-        payload.append("companyName", formData.companyName);
-        payload.append("tinNumber", formData.tinNumber);
-        payload.append("sector", formData.sector);
-        payload.append("email", formData.email);
-        payload.append("location", formData.location);
-        payload.append("internship", formData.internship);
-        payload.append("description", formData.description);
-        if (formData.companyLogo) {
-          payload.append("companyLogo", formData.companyLogo);
-        }
+        payload.companyName = formData.companyName;
+        payload.tinNumber = formData.tinNumber;
+        payload.sector = formData.sector;
+        payload.email = formData.email;
+        payload.password = formData.password;
+        payload.confirmPassword = formData.confirmPassword;
+        payload.location = formData.location;
+        payload.internship = formData.internship;
+        payload.description = formData.description;
       }
 
       const res = await fetch(apiUrl, {
         method: "POST",
-        body: payload, // FormData handles headers automatically
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
 
       const data = await res.json();
-      if (res.ok) {
-        alert(`Signup successful as ${role}`);
-        console.log("Response:", data);
+      console.log(data);
+
+      if (data.success) {
+        setMessage("✅ Signup successful!");
+        setIsError(false);
+
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("user", JSON.stringify(data.user));
+        window.location.href="/"
+
       } else {
-        alert(data.message || "Something went wrong!");
+        setMessage(data.message || "❌ Signup failed, please try again.");
+        setIsError(true);
       }
     } catch (error) {
       console.error("Signup error:", error);
-      alert("Error connecting to the server.");
+      setMessage("⚠️ Error connecting to the server.");
+      setIsError(true);
+    } finally {
+      setIsLoading(false); // 🔹 Stop loading
     }
   };
 
@@ -96,10 +114,20 @@ const Signup = () => {
           Sign Up
         </h2>
 
-        {/* Role Selector */}
+        {message && (
+          <p
+            className={`text-sm text-center mt-3 font-medium ${
+              isError ? "text-red-500" : "text-green-600"
+            }`}
+          >
+            {message}
+          </p>
+        )}
+
+ {/* Role Selector */}
         <div className="flex justify-center mb-6">
           <button
-            className={`px-4 py-2 rounded-l-lg font-medium ${
+            className={`px-4 py-2 rounded-l-lg font-medium cursor-pointer ${
               role === "graduate"
                 ? "bg-green-500 text-white"
                 : "bg-gray-200 text-gray-700"
@@ -109,7 +137,7 @@ const Signup = () => {
             Graduate
           </button>
           <button
-            className={`px-4 py-2 rounded-r-lg font-medium ${
+            className={`px-4 py-2 rounded-r-lg font-medium cursor-pointer ${
               role === "company"
                 ? "bg-green-500 text-white"
                 : "bg-gray-200 text-gray-700"
@@ -120,13 +148,16 @@ const Signup = () => {
           </button>
         </div>
 
+
         {/* Form */}
         <form className="space-y-4" onSubmit={handleSubmit}>
-          {/* Graduate Signup */}
           {role === "graduate" && (
             <>
               <div className="text-right text-sm">
-                <Link to="/reset-password" className="text-green-500 hover:underline">
+                <Link
+                  to="/reset-password"
+                  className="text-green-500 hover:underline"
+                >
                   Forgot Password?
                 </Link>
               </div>
@@ -149,15 +180,7 @@ const Signup = () => {
                 className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
               />
 
-              <input
-                type="text"
-                name="location"
-                placeholder="Location"
-                value={formData.location}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
-              />
-
+              {/* Password fields under email */}
               <input
                 type="password"
                 name="password"
@@ -172,6 +195,15 @@ const Signup = () => {
                 name="confirmPassword"
                 placeholder="Confirm Password"
                 value={formData.confirmPassword}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+              />
+
+              <input
+                type="text"
+                name="location"
+                placeholder="Location"
+                value={formData.location}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
               />
@@ -272,6 +304,25 @@ const Signup = () => {
                 className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
               />
 
+              {/* Password fields under email */}
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+              />
+
+              <input
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirm Password"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+              />
+
               <input
                 type="text"
                 name="location"
@@ -314,9 +365,16 @@ const Signup = () => {
           {/* Submit */}
           <button
             type="submit"
-            className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition"
+            disabled={isLoading} // 🔹 Disable button
+            className={`w-full py-2 rounded-lg transition text-white ${
+              isLoading
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-green-500 hover:bg-green-600"
+            }`}
           >
-            Sign Up as {role === "graduate" ? "Graduate" : "Private Sector"}
+            {isLoading
+              ? "Submitting..."
+              : `Sign Up as ${role === "graduate" ? "Graduate" : "Private Sector"}`}
           </button>
         </form>
 

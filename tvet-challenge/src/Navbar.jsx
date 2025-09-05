@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import dark from "./assets/dark-icon.png";
-import log from "./assets/log1.png";
+import navlog from "./assets/log1.png"
 import Language from "./hooks/Language";
-import { Menu, X, ChevronDown, User } from "lucide-react";
+import { Menu, X, ChevronDown, User, LogOut, Archive, Shield } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import useAuth from "./hooks/useAuth"; // import your useAuth hook
 
@@ -12,8 +12,16 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
   const googleTranslateRef = useRef(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+const [user, setUser] = useState({});
 
-  const { isLoggedIn, user, logout } = useAuth();
+const { isLoggedIn: log, user: acc, logout } = useAuth();
+
+useEffect(() => {
+  setUser(acc);
+  setIsLoggedIn(log);
+}, [log, acc]);
+
 
   // Dark mode effect
   useEffect(() => {
@@ -55,6 +63,7 @@ const Navbar = () => {
   const location = useLocation();
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    setMenuOpen(false)
   }, [location]);
 
   return (
@@ -67,7 +76,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <div>
-        <img src={log} alt="logo" className="w-28 md:w-36" />
+        <img src={navlog} alt="logo" className="w-28 md:w-36" />
       </div>
 
       {/* Desktop Menu */}
@@ -83,7 +92,15 @@ const Navbar = () => {
         <Link to="/about">About</Link>
         <Link to="/sectors">Sectors</Link>
         <Link to="/successStories">Success Stories</Link>
-        <Link to="/carriesPathWays">Carries Pathways</Link>
+        {
+          isLoggedIn && user.userType=="graduate" && (
+            <>
+            <Link to="/PrivateSectors" onClick={() => setMenuOpen(false)}>Private Sectors</Link>
+            <Link to="/carriesPathWays">Career Pathways</Link>
+            
+            </>
+          )
+        }
         { !isLoggedIn && <Link
           to="/auth"
           className="bg-green-500 rounded-2xl text-white font-bold px-4 py-2 hover:bg-green-600 transition"
@@ -102,12 +119,17 @@ const Navbar = () => {
     </button>
 
     {accountOpen && (
-      <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg text-black z-50 px-2 border border-gray-300">
-        <p className="px-4 py-2 border-b border-gray-300">{user?.email}</p>
+      <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg text-black z-50 px-2  py-2 border border-gray-300 overflow-hidden">
+        <p className="px-4 py-2 border-b border-gray-300 text-sm">Hi, {user?.username}</p>
+          <Link to="/profile" className="px-2 flex gap-3 items-center py-2"> <Shield size={16}/> Profile</Link>
+          <div className="border-b my-1 border-gray-300"></div>
+          <Link to="/protfolio" className="px-2 flex gap-3 items-center py-2"> <Archive size={16}/> Portifolio</Link>
+          <div className="border-b my-1 border-gray-300"></div>
         <button
           onClick={logout}
-          className="w-full text-left px-4 py-2 hover:bg-gray-100 cursor-pointer "
+          className="w-full text-left px-2 py-2 hover:bg-gray-100 cursor-pointer flex gap-3 items-center"
         >
+          <LogOut size={16}/>
           Logout
         </button>
       </div>
@@ -148,8 +170,14 @@ const Navbar = () => {
           <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link to="/sectors" onClick={() => setMenuOpen(false)}>Sectors</Link>
           <Link to="/successStories" onClick={() => setMenuOpen(false)}>Success Stories</Link>
-          <Link to="/carriesPathWays" onClick={() => setMenuOpen(false)}>Carries Pathways</Link>
-
+ {
+          isLoggedIn && user.userType=="graduate" && (
+            <>
+            <Link to="/carriesPathWays" onClick={() => setMenuOpen(false)}>Career Pathways</Link>
+            <Link to="/privateSectors" onClick={() => setMenuOpen(false)}>Private Sectors</Link>
+            </>
+          )
+        }
         
 {isLoggedIn && (
   <div className="relative">
