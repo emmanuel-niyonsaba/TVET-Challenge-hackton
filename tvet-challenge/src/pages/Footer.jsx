@@ -1,72 +1,101 @@
-import { Link } from "react-router-dom"
-import InstagramIcon from '@mui/icons-material/Instagram';
-import XIcon from '@mui/icons-material/X';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { Link } from "react-router-dom";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import XIcon from "@mui/icons-material/X";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+
 const Footer = () => {
-    return (
-        <>
-        <div className="  bg-gray-200 ">
-
-            <div className=" bg-gray-200 p-3 flex justify-around items-center">
-                <div>
-                    <h2 className=" font-bold">Usefull links</h2>
-                    <p>Subscribe to our newsletter and receive the latest <br />
-                        news about our products and services!</p>
-                </div>
-                
-                    <ul className=" space-y-3">
-                    <h1 className="font-bold"> Usefull links</h1>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/sectors">Sectors</Link>
-                        </li>
-                        <li>
-                            <Link to="/successStories">Success Stories</Link>
-                        </li>
-                        <li>
-                            <Link to="/carriesPathWays">Career Paths</Link>
-                        </li>
-                    </ul>
-                    <ul className="  space-y-3">
-                        <h2 className=" font-bold"> Our service</h2>
-                        <li>Connect Graduates</li>
-                        <li>Internships Offer</li>
-                        <li>Data management</li>
-                        <li>Portfolio </li>
-                        <li>Boost you awareness </li>
-                    </ul>
-                    <div>
-
-                    </div>
-
-               
-            </div>
-            <div className=" flex justify-between p-5 items-center">
-                <div className=" space-y-3">
-                   <div className=" space-x-3">
-                    <InstagramIcon/>
-                    <XIcon/>
-                    <YouTubeIcon/>
-                    <LinkedInIcon/>
-                    </div>
-                    <p>@rtb-rwanda</p>
-                </div>
-                <Link to="/">
-                <button className=" bg-green-500 text-white p-2 rounded-[10px]">Back to home <ArrowUpwardIcon/> </button>
-                </Link>
-            </div>
-            <p  className=" items-center p-2     flex justify-self-center">rtb-Rwanda &copy; 2025 All copy right reserved</p>
+  return (
+    <footer className="bg-gray-200 text-gray-800">
+      {/* Top Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 md:px-12">
+        {/* Newsletter */}
+        <div>
+          <h2 className="font-bold text-lg mb-2">Stay Updated</h2>
+          <p className="text-sm">
+            Subscribe to our newsletter and receive the latest news about our
+            products and services!
+          </p>
         </div>
 
-        </>
-    )
-}
+        {/* Useful Links */}
+        <div>
+          <h2 className="font-bold text-lg mb-3">Useful Links</h2>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link to="/" className="hover:text-green-600">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-green-600">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/sectors" className="hover:text-green-600">
+                Sectors
+              </Link>
+            </li>
+            <li>
+              <Link to="/successStories" className="hover:text-green-600">
+                Success Stories
+              </Link>
+            </li>
+            <li>
+              <Link to="/carriesPathWays" className="hover:text-green-600">
+                Career Paths
+              </Link>
+            </li>
+          </ul>
+        </div>
 
-export default Footer
+        {/* Services */}
+        <div>
+          <h2 className="font-bold text-lg mb-3">Our Services</h2>
+          <ul className="space-y-2 text-sm">
+            <li>Connect Graduates</li>
+            <li>Internships Offer</li>
+            <li>Data Management</li>
+            <li>Portfolio</li>
+            <li>Boost Awareness</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-300 p-4 md:px-12">
+        {/* Social Links */}
+        <div className="flex items-center gap-4 mb-4 md:mb-0">
+          <Link to="https://www.instagram.com/rtb_rwanda/" target="_blank">
+            <InstagramIcon className="hover:text-pink-600 cursor-pointer" />
+          </Link>
+          <Link to="https://x.com/RTB_Rwanda" target="_blank">
+            <XIcon className="hover:text-black cursor-pointer" />
+          </Link>
+          <Link to="https://www.youtube.com/@rwandatvetboard" target="_blank">
+            <YouTubeIcon className="hover:text-red-600 cursor-pointer" />
+          </Link>
+          <Link to="https://www.linkedin.com" target="_blank">
+            <LinkedInIcon className="hover:text-blue-700 cursor-pointer" />
+          </Link>
+        </div>
+
+        {/* Back to Home */}
+        <Link to="/">
+          <button className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+            Back to Home <ArrowUpwardIcon fontSize="small" />
+          </button>
+        </Link>
+      </div>
+
+      {/* Copyright */}
+      <p className="text-center text-sm py-3 border-t border-gray-300">
+        © {new Date().getFullYear()} RTB-Rwanda. All rights reserved.
+      </p>
+    </footer>
+  );
+};
+
+export default Footer;

@@ -147,30 +147,29 @@ const AnimatedBarChart = ({ data, title, maxValue }) => {
   )
 }
 
-
 const Constraction = ({ agriculturalStats, slideshowImages }) => {
 
   const defaultData = {
     production: [
-      { name: 'Crops', value: 4500 },
-      { name: 'Livestock', value: 3200 },
-      { name: 'Dairy', value: 2800 },
-      { name: 'Fruits', value: 3800 },
-      { name: 'Vegetables', value: 4200 }
+    { name: 'Buildings', value: 4500 },
+    { name: 'Bridges', value: 3200 },
+    { name: 'Roads', value: 2800 },
+    { name: 'Tunnels', value: 3800 },
+    { name: 'Dams', value: 4200 }
     ],
     yield: [
-      { name: 'Crops', value: 3200 },
-      { name: 'Livestock', value: 2800 },
-      { name: 'Dairy', value: 3500 },
-      { name: 'Fruits', value: 2900 },
-      { name: 'Vegetables', value: 3800 }
+    { name: 'Buildings', value: 4500 },
+    { name: 'Bridges', value: 3200 },
+    { name: 'Roads', value: 2800 },
+    { name: 'Tunnels', value: 3800 },
+    { name: 'Dams', value: 4200 }
     ],
     area: [
-      { name: 'Crops', value: 2800 },
-      { name: 'Livestock', value: 2200 },
-      { name: 'Dairy', value: 1800 },
-      { name: 'Fruits', value: 2400 },
-      { name: 'Vegetables', value: 3000 }
+    { name: 'Buildings', value: 4500 },
+    { name: 'Bridges', value: 3200 },
+    { name: 'Roads', value: 2800 },
+    { name: 'Tunnels', value: 3800 },
+    { name: 'Dams', value: 4200 }
     ]
   }
 
@@ -178,30 +177,31 @@ const Constraction = ({ agriculturalStats, slideshowImages }) => {
   const defaultImages = [
     {
       src: planning,
-      alt: "Agricultural landscape in Ngororero district",
-      caption: "July 12, 2025 - Agricultural landscape in Ngororero district showing diverse farming practices"
+      alt: "Construction site in Kigali",
+      caption: "July 12, 2025 - Construction site in Kigali showing building foundations and equipment"
     },
     {
       src: Intare_arena,
-      alt: "Coffee plantation in Rwanda",
-      caption: "Coffee plantation - One of Rwanda's major export crops contributing significantly to foreign exchange"
+      alt: "Bridge construction in Rwanda",
+      caption: "Bridge construction - Ongoing bridge project in Rwanda demonstrating structural framework"
     },
     {
       src: fpr,
-      alt: "Tea cultivation terraces",
-      caption: "Tea cultivation on terraced hillsides demonstrating sustainable farming practices"
+      alt: "Roadworks in Rwanda",
+      caption: "Roadworks showing paving and traffic management in Rwandan cities"
     },
     {
       src: building,
-      alt: "Livestock farming",
-      caption: "Livestock farming supporting rural livelihoods and contributing to agricultural GDP"
+      alt: "High-rise building construction",
+      caption: "High-rise building construction in Kigali illustrating scaffolding, cranes, and progress"
     },
     {
       src: cups,
-      alt: "Grain harvest season",
-      caption: "Grain harvest season showcasing cereal production for local consumption and export"
+      alt: "Dam construction in Rwanda",
+      caption: "Dam construction site in Rwanda demonstrating heavy machinery and water management systems"
     }
   ]
+
 
   const data = agriculturalStats || defaultData
   const images = slideshowImages || defaultImages

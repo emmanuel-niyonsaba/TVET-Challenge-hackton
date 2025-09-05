@@ -157,56 +157,57 @@ const Hospitality = ({ agriculturalStats, slideshowImages }) => {
 
   const defaultData = {
     production: [
-      { name: 'Crops', value: 4500 },
-      { name: 'Livestock', value: 3200 },
-      { name: 'Dairy', value: 2800 },
-      { name: 'Fruits', value: 3800 },
-      { name: 'Vegetables', value: 4200 }
+{ name: 'Hotels', value: 2800 },
+{ name: 'Restaurants', value: 2200 },
+{ name: 'Tourist Sites', value: 1800 },
+{ name: 'Guided Tours', value: 2400 },
+{ name: 'Transport Services', value: 3000 }
     ],
     yield: [
-      { name: 'Crops', value: 3200 },
-      { name: 'Livestock', value: 2800 },
-      { name: 'Dairy', value: 3500 },
-      { name: 'Fruits', value: 2900 },
-      { name: 'Vegetables', value: 3800 }
+{ name: 'Hotels', value: 2800 },
+{ name: 'Restaurants', value: 2200 },
+{ name: 'Tourist Sites', value: 1800 },
+{ name: 'Guided Tours', value: 2400 },
+{ name: 'Transport Services', value: 3000 }
     ],
     area: [
-      { name: 'Crops', value: 2800 },
-      { name: 'Livestock', value: 2200 },
-      { name: 'Dairy', value: 1800 },
-      { name: 'Fruits', value: 2400 },
-      { name: 'Vegetables', value: 3000 }
+{ name: 'Hotels', value: 2800 },
+{ name: 'Restaurants', value: 2200 },
+{ name: 'Tourist Sites', value: 1800 },
+{ name: 'Guided Tours', value: 2400 },
+{ name: 'Transport Services', value: 3000 }
     ]
   }
 
 
   const defaultImages = [
-    {
-      src: hos1,
-      alt: "Agricultural landscape in Musanze  district",
-      caption: "July 22, 2025 - Toursm landscape in Ngororero district showing diverse farming practices"
-    },
-    {
-      src: hos2,
-      alt: "Coffee plantation in Rwanda",
-      caption: "Coffee plantation - One of Rwanda's major export crops contributing significantly to foreign exchange"
-    },
-    {
-      src: hos3,
-      alt: "Tea cultivation terraces",
-      caption: "Tea cultivation on terraced hillsides demonstrating sustainable farming practices"
-    },
-    {
-      src: hos4,
-      alt: "Livestock farming",
-      caption: "Livestock farming supporting rural livelihoods and contributing to agricultural GDP"
-    },
-    {
-      src: hos5,
-      alt: "Grain harvest season",
-      caption: "Grain harvest season showcasing cereal production for local consumption and export"
-    }
-  ]
+  {
+    src: hos1,
+    alt: "Volcanoes National Park in Musanze",
+    caption: "July 22, 2025 - Tourists visiting Volcanoes National Park observing gorillas and scenic landscapes"
+  },
+  {
+    src: hos2,
+    alt: "Kigali City cultural tour",
+    caption: "Cultural tour in Kigali showcasing Rwandan heritage sites and local experiences"
+  },
+  {
+    src: hos3,
+    alt: "Lake Kivu waterfront",
+    caption: "Lake Kivu tourism highlighting boat rides, lakeside resorts, and scenic views"
+  },
+  {
+    src: hos4,
+    alt: "Akagera National Park safari",
+    caption: "Safari tour in Akagera National Park experiencing wildlife and guided excursions"
+  },
+  {
+    src: hos5,
+    alt: "Nyungwe Forest canopy walk",
+    caption: "Tourists enjoying Nyungwe Forest canopy walk exploring Rwanda's rainforest biodiversity"
+  }
+]
+
 
   const data = agriculturalStats || defaultData
   const images = slideshowImages || defaultImages

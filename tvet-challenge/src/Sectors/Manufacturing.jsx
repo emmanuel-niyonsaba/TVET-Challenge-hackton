@@ -151,56 +151,57 @@ const Manufacturing = ({ agriculturalStats, slideshowImages }) => {
 
   const defaultData = {
     production: [
-      { name: 'Crops', value: 4500 },
-      { name: 'Livestock', value: 3200 },
-      { name: 'Dairy', value: 2800 },
-      { name: 'Fruits', value: 3800 },
-      { name: 'Vegetables', value: 4200 }
+    { name: 'Garments', value: 4500 },
+    { name: 'Pharmaceuticals', value: 3200 },
+    { name: 'Construction Materials', value: 2800 },
+    { name: 'Food Processing', value: 3800 },
+    { name: 'Beverages', value: 4200 }
     ],
     yield: [
-      { name: 'Crops', value: 3200 },
-      { name: 'Livestock', value: 2800 },
-      { name: 'Dairy', value: 3500 },
-      { name: 'Fruits', value: 2900 },
-      { name: 'Vegetables', value: 3800 }
+    { name: 'Garments', value: 4500 },
+    { name: 'Pharmaceuticals', value: 3200 },
+    { name: 'Construction Materials', value: 2800 },
+    { name: 'Food Processing', value: 3800 },
+    { name: 'Beverages', value: 4200 }
     ],
     area: [
-      { name: 'Crops', value: 2800 },
-      { name: 'Livestock', value: 2200 },
-      { name: 'Dairy', value: 1800 },
-      { name: 'Fruits', value: 2400 },
-      { name: 'Vegetables', value: 3000 }
+    { name: 'Garments', value: 4500 },
+    { name: 'Pharmaceuticals', value: 3200 },
+    { name: 'Construction Materials', value: 2800 },
+    { name: 'Food Processing', value: 3800 },
+    { name: 'Beverages', value: 4200 }
     ]
   }
 
 
   const defaultImages = [
-    {
-      src: TheJourney,
-      alt: "Agricultural landscape in Musanze  district",
-      caption: "July 22, 2025 - Toursm landscape in Ngororero district showing diverse farming practices"
-    },
-    {
-      src: rwanda,
-      alt: "Coffee plantation in Rwanda",
-      caption: "Coffee plantation - One of Rwanda's major export crops contributing significantly to foreign exchange"
-    },
-    {
-      src: Photoportrait,
-      alt: "Tea cultivation terraces",
-      caption: "Tea cultivation on terraced hillsides demonstrating sustainable farming practices"
-    },
-    {
-      src: inIndustry,
-      alt: "Livestock farming",
-      caption: "Livestock farming supporting rural livelihoods and contributing to agricultural GDP"
-    },
-    {
-      src: engeneers,
-      alt: "Grain harvest season",
-      caption: "Grain harvest season showcasing cereal production for local consumption and export"
-    }
-  ]
+  {
+    src: TheJourney,
+    alt: "Textile factory in Kigali",
+    caption: "July 22, 2025 - Textile factory in Kigali producing garments for local and export markets"
+  },
+  {
+    src: rwanda,
+    alt: "Pharmaceutical manufacturing plant",
+    caption: "Pharmaceutical plant in Rwanda producing medicines and health products for the domestic market"
+  },
+  {
+    src: Photoportrait,
+    alt: "Food processing factory",
+    caption: "Food processing factory demonstrating production of packaged foods and beverages in Rwanda"
+  },
+  {
+    src: inIndustry,
+    alt: "Construction materials manufacturing",
+    caption: "Manufacturing site producing cement, bricks, and other construction materials in Rwanda"
+  },
+  {
+    src: engeneers,
+    alt: "Beverage production facility",
+    caption: "Beverage factory showcasing production lines for soft drinks and bottled water in Rwanda"
+  }
+]
+
 
   const data = agriculturalStats || defaultData
   const images = slideshowImages || defaultImages

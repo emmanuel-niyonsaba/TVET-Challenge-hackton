@@ -152,56 +152,57 @@ const Beauty = ({ agriculturalStats, slideshowImages }) => {
 
   const defaultData = {
     production: [
-      { name: 'Crops', value: 4500 },
-      { name: 'Livestock', value: 3200 },
-      { name: 'Dairy', value: 2800 },
-      { name: 'Fruits', value: 3800 },
-      { name: 'Vegetables', value: 4200 }
+      { name: 'makeup', value: 4500 },
+      { name: 'Massage', value: 3200 },
+      { name: 'Skincare', value: 2800 },
+      { name: 'Facial', value: 3800 },
+      { name: 'Eyelashes', value: 4200 }
     ],
     yield: [
-      { name: 'Crops', value: 3200 },
-      { name: 'Livestock', value: 2800 },
-      { name: 'Dairy', value: 3500 },
-      { name: 'Fruits', value: 2900 },
-      { name: 'Vegetables', value: 3800 }
+      { name: 'makeup', value: 4500 },
+      { name: 'Massage', value: 3200 },
+      { name: 'Skincare', value: 2800 },
+      { name: 'Facial', value: 3800 },
+      { name: 'Eyelashes', value: 4200 }
     ],
     area: [
-      { name: 'Crops', value: 2800 },
-      { name: 'Livestock', value: 2200 },
-      { name: 'Dairy', value: 1800 },
-      { name: 'Fruits', value: 2400 },
-      { name: 'Vegetables', value: 3000 }
+      { name: 'makeup', value: 4500 },
+      { name: 'Massage', value: 3200 },
+      { name: 'Skincare', value: 2800 },
+      { name: 'Facial', value: 3800 },
+      { name: 'Eyelashes', value: 4200 }
     ]
   }
 
 
   const defaultImages = [
-    {
-      src: focused,
-      alt: "Agricultural landscape in Ngororero district",
-      caption: "July 12, 2025 - Agricultural landscape in Ngororero district showing diverse farming practices"
-    },
-    {
-      src: mekauptolls,
-      alt: "Coffee plantation in Rwanda",
-      caption: "Coffee plantation - One of Rwanda's major export crops contributing significantly to foreign exchange"
-    },
-    {
-      src: makingup,
-      alt: "Tea cultivation terraces",
-      caption: "Tea cultivation on terraced hillsides demonstrating sustainable farming practices"
-    },
-    {
-      src: paintme,
-      alt: "Livestock farming",
-      caption: "Livestock farming supporting rural livelihoods and contributing to agricultural GDP"
-    },
-    {
-      src: leashes,
-      alt: "Grain harvest season",
-      caption: "Grain harvest season showcasing cereal production for local consumption and export"
-    }
-  ]
+  {
+    src: focused,
+    alt: "Modern beauty salon interior",
+    caption: "July 12, 2025 - Modern beauty salon interior showcasing professional styling stations"
+  },
+  {
+    src: mekauptolls,
+    alt: "Cosmetic products display",
+    caption: "Cosmetic products - A wide range of skincare and makeup products for diverse client needs"
+  },
+  {
+    src: makingup,
+    alt: "Makeup artist at work",
+    caption: "Makeup artist applying professional makeup demonstrating beauty techniques"
+  },
+  {
+    src: paintme,
+    alt: "Manicure and pedicure session",
+    caption: "Manicure and pedicure session providing nail care and styling services"
+  },
+  {
+    src: leashes,
+    alt: "Facial treatment procedure",
+    caption: "Facial treatment procedure highlighting skincare and wellness services offered in salons"
+  }
+]
+
 
   const data = agriculturalStats || defaultData
   const images = slideshowImages || defaultImages
